@@ -47,16 +47,19 @@
         position: relative;
         border-radius: 50%;
       }
-
       .bubble {
         position: relative;
         z-index: 1;
         width: 120px;
         height: 120px;
         left: -30px;
-
+        transition: all .25s ease-in;
         img {
           width: 90%;
+        }
+        &:hover {
+          cursor: pointer;
+          scale: 1.1;
         }
       }
     }

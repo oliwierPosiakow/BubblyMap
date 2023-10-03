@@ -49,9 +49,14 @@
   width: 120px;
   height: 120px;
   left: -30px;
+  transition: all 0.25s ease-in;
 }
 .bubbles .lines .line .bubble img {
   width: 90%;
+}
+.bubbles .lines .line .bubble:hover {
+  cursor: pointer;
+  scale: 1.1;
 }
 
 * {

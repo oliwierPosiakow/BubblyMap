@@ -1,0 +1,22 @@
+.bubbles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bubbles > div {
+  border-radius: 50%;
+}
+.bubbles_bubble-main {
+  background-color: #facd01;
+  width: 120px;
+  height: 120px;
+  position: relative;
+}
+.bubbles_bubble-side {
+  background-color: black;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+
+/*# sourceMappingURL=bubles.css.map */

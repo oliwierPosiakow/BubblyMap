@@ -1,0 +1,66 @@
+@use "colors";
+
+
+.bubbles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .bubble {
+    border-radius: 50%;
+  }
+  &_bubble-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: colors.$main;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    border-radius: 50%;
+    z-index: 10;
+    img{
+      width: 50%;
+    }
+  }
+  .lines {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    .line {
+      height: 2px;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      right: 50%;
+      transform: rotate(33deg);
+      justify-content: flex-start;
+      transform-origin: right center;
+      border: colors.$blik dashed 1px;
+      .dot {
+        width: 10px;
+        height: 10px;
+        background-color: colors.$blik;
+        position: relative;
+        border-radius: 50%;
+      }
+      .bubble {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        width: 120px;
+        height: 120px;
+        left: -30px;
+        background-color: colors.$mpay;
+        transition: all 5s ease-in-out;
+        img {
+          width: 90%;
+        }
+      }
+    }
+  }
+}

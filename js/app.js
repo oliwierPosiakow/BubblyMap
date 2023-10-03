@@ -3,7 +3,6 @@ import {data} from "../data/data.js";
 const container = document.getElementById('lines')
 const bubbleData = data.data;
 let rotate = 90
-let animationCount = 100000
 
 //function which provides random number to perform random animations
 
@@ -14,23 +13,29 @@ function getRandom(min, max) {
 //creating DOM elements based on data provided from a file
 
 for(let item of bubbleData) {
+
+  //creating dashed line
   const line = document.createElement('div');
   line.classList.add('line');
   line.style.width = `${getRandom(350, 390)}px`;
   line.style.transform = `rotate(${rotate * 45}deg)`;
 
+  //creating moving dot
   const span = document.createElement('span');
   span.classList.add('dot');
 
+  //crating bubble with logo inside
   const bubble = document.createElement('div');
   bubble.classList.add('bubble');
   bubble.style.backgroundColor = item?.color;
 
+  //adding logo to the bubble
   const image = document.createElement('img');
   image.style.transform = `rotate(-${rotate * 45}deg)`;
   image.src = item?.path
   image.alt = item?.name + ' logo'
 
+  //properly nesting all elements
   bubble.appendChild(image);
   line.appendChild(span)
   line.appendChild(bubble);

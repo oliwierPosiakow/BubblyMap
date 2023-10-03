@@ -3,18 +3,17 @@
   justify-content: center;
   align-items: center;
 }
-.bubbles .bubble {
-  border-radius: 50%;
-}
-.bubbles_bubble-main {
+.bubbles .bubble, .bubbles_bubble-main {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 50%;
+}
+.bubbles_bubble-main {
   background-color: #facd01;
   width: 150px;
   height: 150px;
   position: relative;
-  border-radius: 50%;
   z-index: 10;
 }
 .bubbles_bubble-main img {
@@ -25,8 +24,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 20px;
-  height: 20px;
 }
 .bubbles .lines .line {
   height: 2px;
@@ -47,16 +44,11 @@
   border-radius: 50%;
 }
 .bubbles .lines .line .bubble {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
   z-index: 1;
   width: 120px;
   height: 120px;
   left: -30px;
-  background-color: #4d2a81;
-  transition: all 5s ease-in-out;
 }
 .bubbles .lines .line .bubble img {
   width: 90%;
